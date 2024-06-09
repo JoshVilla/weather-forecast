@@ -13,9 +13,11 @@ interface IInfo {
 
 const SunCondition = ({ info }: Props) => {
   const { latitude, longitude } = info;
-  const riseTime = getSunTime("sunrise", longitude, latitude);
-  const setTime = getSunTime("sunset", longitude, latitude);
-  console.log(latitude, longitude);
+  const isLoading = latitude === 0 && longitude === 0;
+  const riseTime = isLoading
+    ? "---"
+    : getSunTime("sunrise", longitude, latitude);
+  const setTime = isLoading ? "---" : getSunTime("sunset", longitude, latitude);
   return (
     <div className={`${globalStyle.glassBackground} p-4 w-[500px]`}>
       <div className="mb-4">Sun Condition</div>
