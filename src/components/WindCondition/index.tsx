@@ -27,7 +27,7 @@ const WindCondition = ({ info }: Props) => {
   function getDirection(heading) {
     let index =
       Math.round(((heading %= 360) < 0 ? heading + 360 : heading) / 45) % 8;
-    return directions[index];
+    return heading ? directions[index] : "---";
   }
   return (
     <div className={`${globalStyle.glassBackground} p-6 w-[500px]`}>
@@ -38,14 +38,18 @@ const WindCondition = ({ info }: Props) => {
             <i className="fa-solid fa-gauge text-xl" />
             <span className="text-gray">Wind Speed</span>
           </div>
-          <div className="ml-10 text-2xl font-bold">{`${speed} m/sec`}</div>
+          <div className="ml-10 text-2xl font-bold">{`${
+            speed || "---"
+          } m/sec`}</div>
         </div>
         <div className="p-2">
           <div className="flex justify-start align-middle gap-4">
             <i className="fa-solid fa-wind text-xl" />
             <span className="text-gray">Gustiness</span>
           </div>
-          <div className="ml-10 text-2xl font-bold">{`${gust} m/sec`}</div>
+          <div className="ml-10 text-2xl font-bold">{`${
+            gust || "---"
+          } m/sec`}</div>
         </div>
         <div className="p-2">
           <div className="flex justify-start align-middle gap-4">
@@ -59,7 +63,7 @@ const WindCondition = ({ info }: Props) => {
             <i className="fa-solid fa-cloud text-xl" />
             <span className="text-gray">Cloudiness</span>
           </div>
-          <div className="ml-10 text-2xl font-bold">{`${cloud}%`}</div>
+          <div className="ml-10 text-2xl font-bold">{`${cloud || "---"}%`}</div>
         </div>
       </div>
     </div>
