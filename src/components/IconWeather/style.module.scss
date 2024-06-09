@@ -1,0 +1,11 @@
+.mainContainer{
+  display: flex;
+  // justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+
+  .temp {
+    // font-size: 30px;
+    font-weight: bold;
+  }
+}

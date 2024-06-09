@@ -1,0 +1,10 @@
+:global(.ant-select) {
+  :global(.ant-select-selector) {
+    background-color: #000 !important;
+    color: #fff;
+
+    :global(.ant-select-selection-placeholder) {
+      color: #c1c1c1;
+    }
+  }
+}

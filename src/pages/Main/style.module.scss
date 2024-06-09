@@ -1,0 +1,15 @@
+.mainContainer {
+  // width: 400px;
+  // background: rgba( 255, 255, 255, 0.05 );
+  // backdrop-filter: blur( 0px );
+  // -webkit-backdrop-filter: blur( 0px );
+  // border-radius: 10px;
+  // border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  .address {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+}
