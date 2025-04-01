@@ -143,7 +143,20 @@ export default function Home() {
           </motion.div>
         </motion.div>
       ) : (
-        <div className="text-white text-2xl">Loading...</div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src={require("@/public/assets/icons/weather.png")}
+            alt="weather"
+            width={100}
+            height={100}
+            className="mx-auto"
+          />
+          <div className="mt-4 text-white text-2xl">Weather Forecast</div>
+        </motion.div>
       )}
     </div>
   );
