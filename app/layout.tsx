@@ -29,7 +29,8 @@ export default function RootLayout({
       >
         {children}
         <footer className="text-center text-white text-sm my-10">
-          Develop by Earl Joshua Villa 2025
+          <div>Developed by Earl Joshua Villa</div>
+          <div className="text-gray-300">April 2025</div>
         </footer>
       </body>
     </html>

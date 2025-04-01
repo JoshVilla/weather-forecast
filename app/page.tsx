@@ -26,7 +26,7 @@ export default function Home() {
         setIsNight(data.current.is_day === 0);
         setForecast(data.forecast.forecastday);
         setArea(
-          `${data.location.name} ,${data.location.region} ,${data.location.country}`
+          `${data.location.name}, ${data.location.region}, ${data.location.country}`
         );
       } else {
         console.error("Failed to fetch weather data:", response.statusText);
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
-              <div className="text-4xl md:text-6xl font-extralight text-center md:text-left">
+              <div className="text-4xl md:text-6xl font-bold text-center md:text-left">
                 {weather.temp_c}°C
               </div>
               <div className="text-gray-500 mt-2 text-sm text-center md:text-left">
